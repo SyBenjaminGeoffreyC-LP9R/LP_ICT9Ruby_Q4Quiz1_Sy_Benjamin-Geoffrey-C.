@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	<title>Quiz #1</title>
+	<style type="text/css">
+		h1, h2, p {
+			margin-left: 10px;
+		}
+		img {
+			width: 800px;
+			height: 650px;
+		}
+		#last {
+			display: none;
+		}
+		.search-container {
+			float: right;
+			padding: 6px;
+			border: none;
+			margin-top: 5px;
+			margin-left: 846px;
+		}
+		.dropbtn {
+			background-color: #3498DB;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			min-width: 150px;
+		}
+		.dropbtn:hover {
+			background-color: #2980B9;
+		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		.dropdown-content {
+			display: none;
+  			position: absolute;
+  			background-color: #f1f1f1;
+  			min-width: 170px;
+  		}
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+		.show {
+			display: contents;
+		}
+		.nav-item:hover {
+			background-color: #3b4040;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">
+			<img class="rounded-circle" src="Logo-purple.jpg" alt="Logo" style="height: 60px; width: 60px; border: 2px dimgray solid;">
+		</a>
+	<ul class="navbar-nav">
+    	<li class="nav-item">
+			<a class="nav-link active" href="main-page.html">Main Menu</a>
+	    </li>
+    	<li class="nav-item">
+			<a class="nav-link" href="first-qtr.html">First Quarter</a>
+	    </li>
+	    <li class="nav-item">
+	    	<a class="nav-link" href="second-qtr.html">Second Quarter</a>
+	    </li>
+	</ul>
+	<div class="search-container ">
+	<form class="form-inline">
+		<input type="text" name="SearchBar" placeholder="Search..." id="Search">
+		<input type="submit" name="Search" value="🔍" onclick="Search()">
+	</form>
+	</div>
+	</nav><br>
+<div class="dropdown">
+  <button onclick="Dropdown1()" class="dropbtn" id="FirstQtr">First Quarter Files</button>
+  <div id="Dropdown1" class="dropdown-content">
+	<h2>Seatwork 1: Meal Planner</h2>
+	<p>In this seatwork, we were tasked with creating a meal planner for every day of the week. Here is a photo of the output:</p>
+	<a href="1QSeatwork1.html"><img src="1QSeatwork1.png"></a>
+	<h2>Seatwork 2: Enhanced Meal Planner</h2>
+	<p>In this seatwork, we were tasked with enhancing and improving our previous seatwork by adding photos, extra designs, etc. Here is a a photo of the output:</p>
+	<a href="1QSeatwork2.html"><img src="1QSeatwork2.png"></a>
+	<h2>Quarterly Project: List of Noli Me Tangere Characters</h2>
+	<p>In this project, ICT and Filipino collaborated to have us create a list of the characters in Noli Me Tangere, full with designs, information, and pictures. Here is a small snippet of the output:</p>
+	<a href="1QProject.html"><img src="1QProject.png"></a>
+  </div>
+  <p id="last1"></p>
+</div><br>
+<div class="dropdown" id="2ndQtr">
+  <button onclick="Dropdown2()" class="dropbtn" id="SecondQtr">Second Quarter Files</button>
+  <div id="Dropdown2" class="dropdown-content">
+	<h2>Seatwork 1: Online Food Menu</h2>
+	<p>In this seatwork, we were tasked with creating a restaurant menu. Here is a photo of the output:</p>
+	<a href="2QSeatwork1.html"><img src="2QSeatwork1.png"></a>
+	<h2>Seatwork 2: Modifying Online Food Menu </h2>
+	<p>In this seatwork, we were tasked with improving our last seatwork by adding more designs such as borders. Here is a photo of the output:</p>
+	<a href="2QSeatwork2.html"><img src="2QSeatwork2.png"></a>
+	<h2>Quarterly Project: Creating a Photo Gallery</h2>
+	<p>In this project, we were tasked with making a photo gallery of places in the Philippines.</p>
+	<a href="2QProject.html"><img src="2QProject.png" style="width: 1250px;"></a>
+  </div>
+  <p id="last2"></p>
+</div>
+	<br><br><br><br><br>
+	<form action="index.html">
+		<center>
+			<input type="checkbox" name="checkbox" class="btn btn-secondary" id="checkbox" value="true" onclick="CheckBox()" required>
+			<input type="submit" class="btn btn-primary" value="Log Out?" onclick="LogOut()">
+		</center>
+	</form>
+	<script type="text/javascript">
+		function Dropdown1() {
+			document.getElementById("Dropdown1").classList.toggle("show");
+		}
+		function Dropdown2() {
+			document.getElementById("Dropdown2").classList.toggle("show");
+		}
+		function LogOut() {
+			Alert = "You have logged out.";
+			window.alert(Alert);
+		}
+		function CheckBox() {
+			if (check = 1) {
+				check = 0;
+			} else {
+				check = 1;
+			}
+		}
+		function LogOut() {
+			check = check === 1;
+			if (true) {
+				Alert = "You have logged out.";
+				window.alert(Alert);
+			}
+		}
+	</script>
+</body>
+</html>
